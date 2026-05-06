@@ -90,6 +90,16 @@ Never merges. Never pushes to main directly.
     are previews for product owner planning, not instructions to
     run yet.
 
+13. **Chats orient via the local filesystem, not the repo URL.**
+    The chat (claude.ai or app) cannot reliably fetch repo files
+    over the web. The reliable path is the Desktop Commander MCP
+    tool, which reads from the local clone of the repo. Every new
+    chat in this project must have Desktop Commander connected
+    before the kickoff prompt is pasted. If Desktop Commander is
+    not available, the chat must say so and stop, rather than
+    silently falling back to web_fetch or other tools — those
+    have failed before and will fail again.
+
 ---
 
 ## The branch lifecycle
@@ -161,14 +171,27 @@ Chat ends. Next topic = next chat.
 
 ## Kickoff prompt template
 
-This is the {project_name} project. Before responding, read these files in this order from the repo at {repo_url}:
-	1	WORKFLOW_PROTOCOL.md — how we work
-	2	PROJECT_CONTEXT.md — what the project is
-	3	docs/DECISIONS.md — what's been decided
-	4	docs/PHASE_PLAN.md — the phases
-	5	docs/BACKLOG.md — what's next
-	6	docs/USAGE.md — current user-facing surface (may be a stub)
-Confirm you have read them and that you will follow WORKFLOW_PROTOCOL.md. Then we'll start.
+Before pasting, confirm Desktop Commander is enabled in the new
+chat. Then paste:
+
+This is the {project_name} project. Local repo at {local_repo_path}.
+
+Before responding, read these six files via Desktop Commander
+(read_file), in this order:
+
+1. {local_repo_path}/WORKFLOW_PROTOCOL.md
+2. {local_repo_path}/PROJECT_CONTEXT.md
+3. {local_repo_path}/docs/DECISIONS.md
+4. {local_repo_path}/docs/PHASE_PLAN.md
+5. {local_repo_path}/docs/BACKLOG.md
+6. {local_repo_path}/docs/USAGE.md
+
+If Desktop Commander is not available, say so and stop. Do not
+fall back to web_fetch or other tools.
+
+Confirm you have read all six and will follow WORKFLOW_PROTOCOL.md.
+Then state where we are and what comes next.
+
 Today's task: {one specific task or question}.
 
 ---
