@@ -64,3 +64,15 @@ in one turn. Product owner ran them in order, the first prompt's
 output should have informed the second's content, and confusion
 followed. Rule 12 prevents this: exactly one Claude Code prompt
 per Claude turn, response analyzed before the next is issued.
+
+## 2026-05-06 — Chats orient via Desktop Commander, not web_fetch
+First attempt to orient a fresh chat via web_fetch on
+github.com/.../blob/main/<file> URLs failed: the chat's web_fetch
+is gated to URLs that appeared in prior tool results, and a fresh
+chat has no priors. The reliable mechanism is the Desktop Commander
+MCP tool, which reads from the local clone of the repo. Rule 13
+codifies this. Kickoff template now points at local filesystem
+paths and requires Desktop Commander; chat must error fast if it
+isn't connected. This is reusable across future projects: any
+project using this protocol assumes a local clone exists and
+Desktop Commander is enabled in chats.

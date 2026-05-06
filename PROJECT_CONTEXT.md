@@ -4,6 +4,10 @@
 
 **Workflow:** see WORKFLOW_PROTOCOL.md. Read it first.
 
+**Local repo path:** /Users/ashish/Claude/personal/workout-app
+(also at /Users/ashish/Claude/personal/workout-data for the data
+repo).
+
 **Purpose:** Personal workout app for daily execution, tracking, and
 OKR review. Cardio (stationary bike) + strength training. Replaces
 IntervalTimer + Gym Day + a Google Sheets coach.
