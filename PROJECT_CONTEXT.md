@@ -2,6 +2,8 @@
 
 **Status:** Phase 0 in progress. Research briefs underway.
 
+**Workflow:** see WORKFLOW_PROTOCOL.md. Read it first.
+
 **Purpose:** Personal workout app for daily execution, tracking, and
 OKR review. Cardio (stationary bike) + strength training. Replaces
 IntervalTimer + Gym Day + a Google Sheets coach.
@@ -38,8 +40,9 @@ Phase 1 failure regardless of code quality.
 - Claude reviews PR diffs directly via GitHub URL, not summaries.
 
 **Phase 0 deliverables (in progress):**
+- [x] WORKFLOW_PROTOCOL.md
+- [ ] docs/CURRENT_STATE.md (user-authored, via interview)
 - [ ] docs/CARDIO_FRAMEWORK.md
 - [ ] docs/STRENGTH_FRAMEWORK.md
 - [ ] docs/TRACKING_AND_OKR_FRAMEWORK.md
-- [ ] docs/CURRENT_STATE.md (user-authored)
-- [ ] docs/DECISIONS.md (accreting)
+- [ ] docs/DECISIONS.md (accreting throughout)

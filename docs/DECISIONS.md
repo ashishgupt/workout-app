@@ -43,3 +43,17 @@ CARDIO_FRAMEWORK, STRENGTH_FRAMEWORK, and TRACKING_AND_OKR_FRAMEWORK
 to allow deeper per-topic research. Flexibility/mobility and balance
 fold into the strength brief (mobility is already shoulder-rehab
 adjacent) unless it gets unwieldy.
+
+## 2026-05-06 — Workflow protocol formalized
+Locked the working agreement between Claude (chat), product owner,
+and Claude Code into WORKFLOW_PROTOCOL.md. Reusable across future
+projects. Triggered by friction during Phase 0 setup — Claude
+drifted from patterns established on the wealth-management app.
+Protocol makes the patterns explicit and self-enforcing via the
+kickoff prompt that every new chat must use.
+
+## 2026-05-06 — Backlog and Usage as standing files
+docs/BACKLOG.md tracks upcoming branches within the current phase
+(volatile, reordered as we learn). docs/USAGE.md is the user-facing
+guide, stub now, populated starting Phase 1. Both are in the
+kickoff prompt's required-reading list.
