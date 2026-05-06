@@ -32,13 +32,6 @@ the app.
 **Design principle:** any in-gym flow that takes > 30 seconds is a
 Phase 1 failure regardless of code quality.
 
-**Workflow:**
-- Claude (chat) is domain expert: writes specs, reviews PRs.
-- Claude Code is developer: implements via feature branches and PRs.
-- I (product owner) decide direction, paste specs to Claude Code,
-  share PR URLs back to Claude for review.
-- Claude reviews PR diffs directly via GitHub URL, not summaries.
-
 **Phase 0 deliverables (in progress):**
 - [x] WORKFLOW_PROTOCOL.md
 - [ ] docs/CURRENT_STATE.md (user-authored, via interview)
