@@ -79,6 +79,17 @@ Never merges. Never pushes to main directly.
     owner invokes it, Claude stops, names what slipped, resets
     to the protocol. No defensiveness.
 
+12. **One Claude Code prompt at a time.** Claude issues exactly
+    one Claude Code prompt per turn. The product owner runs it,
+    pastes the response back, Claude analyzes, then issues the
+    next prompt. Sequencing multiple prompts in advance creates
+    confusion when the product owner is working through them
+    linearly and an earlier prompt's output should change the
+    later one's content. The exception: prompts that Claude
+    explicitly marks as "to be run later, after I confirm" — these
+    are previews for product owner planning, not instructions to
+    run yet.
+
 ---
 
 ## The branch lifecycle

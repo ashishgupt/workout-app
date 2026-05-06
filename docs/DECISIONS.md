@@ -57,3 +57,10 @@ docs/BACKLOG.md tracks upcoming branches within the current phase
 (volatile, reordered as we learn). docs/USAGE.md is the user-facing
 guide, stub now, populated starting Phase 1. Both are in the
 kickoff prompt's required-reading list.
+
+## 2026-05-06 — Rule 12 added: one Claude Code prompt at a time
+Earlier in Phase 0 setup, Claude issued multiple sequenced prompts
+in one turn. Product owner ran them in order, the first prompt's
+output should have informed the second's content, and confusion
+followed. Rule 12 prevents this: exactly one Claude Code prompt
+per Claude turn, response analyzed before the next is issued.
